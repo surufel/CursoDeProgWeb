@@ -33,41 +33,74 @@
 
 body {
     margin: 0;
-    background-color: var(--base);
+    background-color: var(--mantle);
     color: var(--text);
+    overflow-x: hidden
 }
 
 header {
     background-color: var(--mantle);
-    height: 42px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 50;
 }
 
 .nav {
-    background-color: var(--mantle);
+    background-color: transparent;
+    backdrop-filter: blur(24px);
+    border-bottom: 1px solid var(--surface0);
+    box-shadow: 0 4px 30px var(--base); 
+    top: 0;
+    width: 100%;
+    z-index: 50;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 0.75rem 1.5rem;
     box-sizing: border-box;
 }
 
 .logo {
-    font-size: 1.25rem;
-    font-weight: bold;
     color: var(--mauve);
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: -0.05rem;
+}
+
+.conteudo-nav {
+    display: flex;
+    gap: 2rem;
 }
 
 
 .conteudo-nav a {
     color: var(--text);
     text-decoration: none;
+    font-family: 'Space Grotesk', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.875rem;
+    text-decoration: none;
 }
+
+
 
 .matricula {
     background-color: var(--mauve);
     color: var(--inverted-text);
     padding: 0.5rem 1.25rem;
-    border-radius: 6px;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.75rem;
+}
+
+.matricula:active {
+    transform: scale(0.95);
 }
