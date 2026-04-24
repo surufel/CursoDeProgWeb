@@ -36,6 +36,8 @@ body {
   background-color: var(--mantle);
   color: var(--text);
   overflow-x: hidden;
+  background-color: var(--base);
+  font-family: sans-serif;
 }
 
 header {
@@ -56,11 +58,12 @@ header {
   z-index: 50;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
   margin: 0 auto;
   padding: 0.75rem 1.5rem;
   box-sizing: border-box;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
 }
 
 .logo {
@@ -102,9 +105,58 @@ header {
   transform: scale(0.95);
 }
 
-body {
-  background-color: #09090b;
-  font-family: sans-serif;
+.titulo {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--base);
+
+  /*efeito de glow ao fundo*/
+  background-image: radial-gradient(
+    ellipse 60% 50% at 50% 50%,
+    rgba(137, 180, 250, 0.20) 0%,
+    rgba(203, 166, 247, 0.15) 40%,
+    transparent 70%
+  );
+}
+
+.titulo_conteudo { 
+  text-align: center;
+  max-width: 700px; /* largarua do texto*/
+  padding: 2rem; /* n encostar na lateral*/
+  margin: 0 auto;
+}
+
+.titulo_titulo {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.titulo_subtitulo {
+  color: var(--subtext0);
+  max-width: 500px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.7;
+}
+
+.titulo_botao {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background-color: var(--sky);
+  color: var(--base);
+  border-radius: 0.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: filter 0.2s ease, transform 0.2s ease; /* animação ao passar o mouse */
+}
+
+.titulo_botao:hover {
+  filter: brightness(1.15);
+  transform: translateY(-2px);
 }
 
 .card_professor {
