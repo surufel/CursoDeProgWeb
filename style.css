@@ -37,7 +37,7 @@ body {
   color: var(--text);
   overflow-x: hidden;
   background-color: var(--base);
-  font-family: sans-serif;
+  font-family: 'Outfit', sans-serif;
 }
 
 header {
@@ -275,4 +275,325 @@ header {
 
 .item.active .botao {
   transform: rotate(180deg);
+}
+
+/* seção do github */
+.github {
+  background: var(--mantle);
+  border: 1px solid var(--surface0);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  max-width: 900px;
+  margin: 40px auto 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.github::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle, rgba(203, 166, 247, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.github::after {
+  content: '';
+  position: absolute;
+  bottom: -60px;
+  left: 40px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(137, 220, 235, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.github_header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.github_header_texto {
+  display: flex;
+  flex-direction: column;
+}
+
+.github_eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--mauve);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+
+.github_titulo {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 0.25rem;
+  letter-spacing: -0.01em;
+}
+
+.github_subtitle {
+  font-size: 14px;
+  color: var(--overlay0);
+  margin: 0 0 2rem;
+}
+
+.github_link-all {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--sky);
+  text-decoration: none;
+  border: 1px solid rgba(137, 220, 235, 0.3);
+  padding: 5px 12px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: background 0.2s, border-color 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.github_link-all:hover {
+  background: rgba(137, 220, 235, 0.1);
+  border-color: rgba(137, 220, 235, 0.6);
+}
+
+.github_stats {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.github_stat-pill {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--surface2);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.github_stat-value {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.gh-repos__filter-bar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.gh-repos__filter-btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(88, 91, 112, 0.4);
+  background: transparent;
+  color: var(--overlay0);
+  cursor: pointer;
+  transition: background 0.18s, border-color 0.18s, color 0.18s;
+}
+
+.gh-repos__filter-btn:hover,
+.gh-repos__filter-btn--active {
+  background: rgba(203, 166, 247, 0.12);
+  border-color: rgba(203, 166, 247, 0.5);
+  color: var(--mauve);
+}
+
+.gh-repos__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 14px;
+}
+
+.gh-repos__card {
+  background: var(--crust);
+  border: 1px solid rgba(108, 112, 134, 0.25);
+  border-radius: 12px;
+  padding: 1.1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: border-color 0.22s, transform 0.22s, background 0.22s;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+}
+
+.gh-repos__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gh-lang-color, var(--mauve)), transparent);
+  opacity: 0;
+  transition: opacity 0.22s;
+}
+
+.gh-repos__card:hover {
+  border-color: rgba(203, 166, 247, 0.35);
+  transform: translateY(-2px);
+  background: var(--mantle);
+}
+
+.gh-repos__card:hover::before {
+  opacity: 1;
+}
+
+.gh-repos__card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.gh-repos__card-icon {
+  color: var(--surface2);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.gh-repos__card-name {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--mauve);
+  flex: 1;
+  word-break: break-word;
+  line-height: 1.3;
+}
+
+.gh-repos__featured-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: rgba(166, 227, 161, 0.1);
+  color: var(--green);
+  border: 1px solid rgba(166, 227, 161, 0.25);
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.gh-repos__visibility-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--surface2);
+  border: 1px solid rgba(88, 91, 112, 0.4);
+  padding: 2px 7px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.gh-repos__card-desc {
+  font-size: 13px;
+  color: var(--overlay2);
+  line-height: 1.55;
+  flex: 1;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.gh-repos__topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.gh-repos__topic {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: rgba(137, 220, 235, 0.08);
+  color: var(--sky);
+  border: 1px solid rgba(137, 220, 235, 0.2);
+}
+
+.gh-repos__card-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+  flex-wrap: wrap;
+}
+
+.gh-repos__lang-badge {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--text);
+}
+ 
+.gh-repos__lang-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+ 
+.gh-repos__meta-stat {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--surface2);
+}
+ 
+.gh-repos__stat-icon {
+  width: 12px;
+  height: 12px;
+}
+ 
+.gh-repos__card-link {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  color: var(--surface2);
+  transition: color 0.18s;
+}
+ 
+.gh-repos__card:hover .gh-repos__card-link {
+  color: var(--sky);
+}
+ 
+.gh-repos__card-link-icon {
+  width: 13px;
+  height: 13px;
+}
+
+.gh-repos__empty {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: var(--surface2);
+  text-align: center;
+  padding: 2rem;
+  grid-column: 1 / -1;
+  margin: 0;
 }
