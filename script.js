@@ -8,3 +8,16 @@ item.forEach( itens => {
     elemento.classList.toggle("active")
   })
 })
+
+const botaoNav = document.querySelector('.matricula');
+const botaoHero = document.querySelector('.titulo_botao');
+const secaoComercial = document.querySelector('.secao-comercial');
+
+function mostrarMatricula(event) {
+  event.preventDefault(); 
+  secaoComercial.classList.add('visivel');
+  secaoComercial.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+if (botaoNav) botaoNav.addEventListener('click', mostrarMatricula);
+if (botaoHero) botaoHero.addEventListener('click', mostrarMatricula);
