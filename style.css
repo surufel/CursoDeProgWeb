@@ -262,7 +262,7 @@ header {
 .conteudo{
   max-height: 0;
   overflow: hidden;
-  padding: 0 20px;
+  padding: 20px;
   color: var(--subtext0);
   transition: all 0.3s ease;
 }
@@ -270,7 +270,7 @@ header {
 
 .item.active .conteudo {
   max-height: 200px;
-  padding: 20px;
+  padding: 8px 20px;
 }
 
 .item.active .botao {
@@ -596,4 +596,10 @@ header {
   padding: 2rem;
   grid-column: 1 / -1;
   margin: 0;
+}
+
+.numero {
+  color: var(--overlay1);
+  font-size: 14px;
+  margin-right: 12px;
 }
