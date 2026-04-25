@@ -194,53 +194,12 @@
 
       </div>
 
-      <div class="item">
-        <div class="corpo">
-          <span class="numero">5</span>
-          <span class="cabecalho">Manipulação do DOM</span>
-          <span botao>⌄</span>
-        </div>
-        <div class="conteudo">
-         <ul>
-          <li> Oque é DOM</li>
-          <li>Seleção de elementos( QUerySelector,getElemntByid)</li>
-          <li>Alterando texto e Html</li>
-          <li>Manipulando classes e estilos</li>
-          <li>Criando e removendo elementos</li>
-          <li> Atualizando conteúdo dinamicamente</li>
-         </ul>
-        </div>
-
-      </div>
-
-      <div class="item">
-        <div class="corpo">
-          <span class="numero">6</span>
-          <span class="cabecalho">Eventos e Interatividade</span>
-          <span class="botao">⌄</span>
-
-        </div>
-
-        <div class="conteudo">
-          <ul>
-            <li>Eventos de clique (click)</li>
-            <li>Eventos de teclado (keydown, keyup)</li>
-            <li>Eventos de formulário (submit)</li>
-            <li>addEventListener na prática</li>
-            <li>Prevenindo comportamento padrão (preventDefault)</li>
-            <li>Criando interações reais (menus, modais, acordeon)</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="item">
+     <div class="item">
         <div class="corpo">
           <span class="numero">7</span>
           <span class="cabecalho">Assíncrono, APIs e Projeto Final</span>
           <span class="botao">⌄</span>
-
         </div>
-
         <div class="conteudo">
           <ul>
             <li>O que é JavaScript assíncrono</li>
@@ -257,9 +216,55 @@
     </div>
     </section>
 
+    <section class="secao-comercial" id="precos">
+        <div class="card_preco">
+            <span class="badge_oferta">Vagas Limitadas</span>
+            <p class="professor_label">Acesso Vitalício</p>
+            <h2 class="nome_professor">Pacote Full-Stack</h2>
+            <div class="preco_valor">
+                R$ 97<span>,90</span>
+            </div>
+            <p class="bio_professor">Consiga sua primeira vaga no mercado de tecnologia com suporte individual e projetos reais.</p>
+            
+            <ul style="list-style: none; padding: 0; color: var(--subtext1); font-size: 0.9rem;">
+                <li style="margin-bottom: 10px;">✅ Acesso a todos os módulos</li>
+                <li style="margin-bottom: 10px;">✅ Certificado de conclusão</li>
+                <li style="margin-bottom: 10px;">✅ Comunidade exclusiva no Discord</li>
+            </ul>
+        </div>
+
+        <div class="form_matricula">
+            <h3>Finalize sua Matrícula</h3>
+            <form action="#">
+                <div class="input-group">
+                    <label for="nome">NOME COMPLETO</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="email">E-MAIL PARA ACESSO</label>
+                    <input type="email" id="email" placeholder="aluno@faculdade.com.br" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="pagamento">FORMA DE PAGAMENTO</label>
+                    <select id="pagamento">
+                        <option value="cartao">Cartão</option>
+                        <option value="pix">Pix</option>
+                        <option value="boleto">Boleto</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="botao-enviar-cyan">Confirmar Inscrição</button>
+            </form>
+        </div>
+    </section>
     <footer></footer>
 
     <script src="script.js"></script>
 
+    
+
   </body>
 </html>
+

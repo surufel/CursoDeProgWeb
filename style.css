@@ -29,6 +29,7 @@
   --crust: #11111b;
   --inverted-text: var(--crust);
   --selection-color: var(--mauve);
+  --bright-cyan: #00F7F9;
 }
 
 body {
@@ -602,4 +603,163 @@ header {
   color: var(--overlay1);
   font-size: 14px;
   margin-right: 12px;
+}
+
+.secao-comercial {
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 0 20px;
+  display: none; 
+  opacity: 0;   
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.secao-comercial.visivel {
+  display: grid; 
+  animation: aparecerSuave 0.5s ease forwards; 
+}
+
+.card_preco{
+  background-color: var(--surface0);
+  border: 1px solid var(--surface1);
+  border-radius: 16px;
+  padding: 40px;
+  position: relative;
+  box-shadow: 0 0 30px rgba(0,247,249,0.05);
+}
+
+.card_preco:hover{
+  transform: scale(1.02);
+  box-shadow: 0 0 50px rgba(0, 247, 249, 0.1);
+}
+
+.badge_oferta{
+  position: absolute;
+  top: -15px;
+  right: 20px;
+  background: var(--mauve);
+  color: var(--base);
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.preco_valor{
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--text);
+  margin: 10px 0;
+}
+
+.preco_valor span{}
+
+.form_matricula{
+  background-color: var(--crust);
+  padding: 40px;
+  border-radius: 16px;
+  border: 1px solid rgba(0,247,249,0.2);
+}
+
+.form_matricula h3{
+  text-align: center;
+  color: var(--text);
+  font-weight: bold;
+  font-size: 1.75rem;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 25px; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+
+.input-group label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--subtext0); 
+    letter-spacing: 0.05em;
+}
+
+.input-group input, 
+.input-group select {
+    padding: 15px;
+    background-color: var(--base); 
+    border: 1px solid var(--surface0);
+    border-radius: 8px; 
+    color: var(--text);
+    outline: none;
+    transition: border-color 0.3s;
+    font-size: 1rem;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: rgba(0,  247, 249, 0.5); 
+}
+
+
+.input-group input::placeholder {
+  color: var(--overlay1);
+}
+
+
+.input-group select {
+  appearance: none; 
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236c7086' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 15px;
+  cursor: pointer;
+}
+
+
+.botao-enviar-cyan {
+    width: 100%;
+    padding: 18px; 
+    background-color: var(--bright-cyan); 
+    color: var(--base); 
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.125rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: filter 0.2s, transform 0.1s;
+    box-shadow: 0 4px 15px rgba(0, 247, 249, 0.2);
+}
+
+.botao-enviar-cyan:hover {
+    filter: brightness(1.1);
+}
+
+.botao-enviar-cyan:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 5px rgba(0, 247, 249, 0.15);
+}
+
+@media (max-width: 900px) {
+    .secao-comercial {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+
+@keyframes aparecerSuave {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
