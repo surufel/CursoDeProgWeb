@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <title>Página Principal - Syntax</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -32,52 +35,7 @@
         </div>
     </section>
 
-    <div class="sumario">
-      
-      <div class="item">
-        <div class="corpo">
-          <span class="cabecalho">Introdução ao javascript</span>
-          <span class="botao"> ⌄ </span>
-        </div>
-        <div class="conteudo">
-          <p> fundamentos da linguagem,variáveis,tipos de dado e primeiros passos para a construção de um script</p>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="corpo">
-           <span class="cabecalho"> primeiro codigo</span>
-           <span class="botao"> ⌄ </span>
-        </div>
-        <div class="conteudo">
-          <p> primeiros passoas na linguagem e primeiros scripts funcionais</p>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="corpo">
-          <span class="cabecalho"> avançando na linguagem</span>
-          <span class="botao"> ⌄ </span>
-        </div>
-        <div class="conteudo">
-          <p> Integração com Banco de Dados e APIs e tratamento de dados dentro da aplicação </p>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="corpo">
-          <span class="cabecalho">Hospedagem de aplicações transferencia limpa dos arquivos para o cliente</span>
-          <span class="botao">⌄</span>
-        </div>
-        <div class="conteudo">
-          <p>Aprendndo protocolos de rede e a como hospedar sites na internet de maneira segura</p>
-
-        </div>
-
-
-      </div>
-
-    </div>
+    
 
     <main>
       <section class="card_professor">
@@ -155,6 +113,195 @@
       </section>
 
     </main>
+
+
+    
+
+    <section class="github" id="repositorios">
+      <div class="github_header">
+        <div class="github_header_texto">
+          <span class="github_eyebrow">//open source</span>
+          <h2 class="github_titulo">Repositórios</h2>
+          <p class="github_subtitulo">Projetos que uso para ensinar e demonstrar conceitos na 
+            prática.
+          </p>
+        </div>
+        <a class="github_link-all" href="https://github.com/AyanCoders" target="_blank" rel="noopener">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+            Ver no GitHub →
+        </a>
+      </div>
+
+      <div class="github_stats">
+        <div class="github_stats-pill">
+          <span class="github_stat-value" id="github_repo-count">8</span> repositórios
+        </div>
+        <div class="github_stats-pill">
+          <span class="github_stat-value" id="github_stars-count">342</span> estrelas totais          
+        </div>
+        <div class="github_stat-pill">
+            <span class="github_stat-value">5</span> linguagens
+        </div>
+      </div>
+
+      <div class="gh-repos__filter-bar" id="gh-filter-bar" role="group" aria-label="Filtrar por linguagem">
+        <button class="gh-repos__filter-btn gh-repos__filter-btn--active" data-lang="all">Todos</button>
+        <button class="gh-repos__filter-btn" data-lang="JavaScript">JavaScript</button>
+        <button class="gh-repos__filter-btn" data-lang="TypeScript">TypeScript</button>
+        <button class="gh-repos__filter-btn" data-lang="HTML">HTML</button>
+        <button class="gh-repos__filter-btn" data-lang="CSS">CSS</button>
+        <button class="gh-repos__filter-btn" data-lang="Python">Python</button>
+        <button class="gh-repos__filter-btn" data-lang="Python">Rust</button>
+      </div>
+
+      <div class="gh-repos__grid" id="gh-repos-grid" aria-live="polite">
+        <!-- Cards injetados via JS -->
+      </div>
+
+    </section>
+
+    <section id="ementa">
+      <div class="sumario">
+      
+      <div class="item">
+        <div class="corpo">
+          <span class="numero">1</span>
+          <span class="cabecalho">Introdução ao javascript</span>
+          <span class="botao"> ⌄ </span>
+        </div>
+        <div class="conteudo">
+          <ul>
+            <li> Oque é JavaScritp e com funciona no navegador</li>
+            <li>como incluir JS no HTML</li>
+            <li> variáveis(var,let,const)</li>
+            <li>tipos de dados(String,number,boolean,null,undefined)</li>
+            <li>Operadores básicos</li>
+            <li> primeiros scripts práticos</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="corpo">
+          <span class="numero">2</span>
+           <span class="cabecalho"> Lógica de Programação</span>
+           <span class="botao"> ⌄ </span>
+        </div>
+        <div class="conteudo">
+          <ul>
+            <li>Estruturas condicionais</li>
+            <li>Operadores ternário</li>
+            <li> switch case</li>
+            <li> Estruturas de repetição</li>
+            <li>controle de fluxo</li>
+            <li>Exercicios práticos de lógica</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="corpo">
+          <span class="numero">3</span>
+          <span class="cabecalho"> Funções e Escopo</span>
+          <span class="botao"> ⌄ </span>
+        </div>
+        <div class="conteudo">
+          <ul>
+            <li>Declarações de funções</li>
+            <li>parâmetros e retorno</li>
+            <li>Arrow functions</li>
+            <li>Escopo(global,local e bloco)</li>
+            <li> Funções anônimas</li>
+            <li>callbacks(introduçõa)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="corpo">
+          <span class="numero">4</span>
+          <span class="cabecalho">Arrays e Objetos</span>
+          <span class="botao">⌄</span>
+        </div>
+        <div class="conteudo">
+          <ul>
+            <li> Criando e manipulando Arrays</li>
+            <li> Métodos importantes(push,pop,map,filter,reduce)</li>
+            <li>Objetos e Propriedades</li>
+            <li>Acesso e modificação de dados</li>
+            <li>Arrays e objetos</li>
+            <li>Interação com forEach</li>
+          </ul>
+
+        </div>
+
+
+      </div>
+
+      <div class="item">
+        <div class="corpo">
+          <span class="numero">5</span>
+          <span class="cabecalho">Manipulação do DOM</span>
+          <span botao>⌄</span>
+        </div>
+        <div class="conteudo">
+         <ul>
+          <li> Oque é DOM</li>
+          <li>Seleção de elementos( QUerySelector,getElemntByid)</li>
+          <li>Alterando texto e Html</li>
+          <li>Manipulando classes e estilos</li>
+          <li>Criando e removendo elementos</li>
+          <li> Atualizando conteúdo dinamicamente</li>
+         </ul>
+        </div>
+
+      </div>
+
+      <div class="item">
+        <div class="corpo">
+          <span class="numero">6</span>
+          <span class="cabecalho">Eventos e Interatividade</span>
+          <span class="botao">⌄</span>
+
+        </div>
+
+        <div class="conteudo">
+          <ul>
+            <li>Eventos de clique (click)</li>
+            <li>Eventos de teclado (keydown, keyup)</li>
+            <li>Eventos de formulário (submit)</li>
+            <li>addEventListener na prática</li>
+            <li>Prevenindo comportamento padrão (preventDefault)</li>
+            <li>Criando interações reais (menus, modais, acordeon)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="corpo">
+          <span class="numero">7</span>
+          <span class="cabecalho">Assíncrono, APIs e Projeto Final</span>
+          <span class="botao">⌄</span>
+
+        </div>
+
+        <div class="conteudo">
+          <ul>
+            <li>O que é JavaScript assíncrono</li>
+            <li>fetch e requisições HTTP</li>
+            <li>Promises (then, catch)</li>
+            <li>async/await</li>
+            <li>Consumindo APIs reais</li>
+            <li>Tratamento de erros</li>
+            <li>Projeto final: aplicação completa integrando tudo</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    </section>
 
     <footer></footer>
 

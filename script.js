@@ -1,11 +1,7 @@
-const itens = document.querySelectorAll(".corpo");
+const item=document.querySelectorAll(".corpo")
 
-itens.forEach(item => {
-  item.addEventListener("click", () => {
-    document.querySelectorAll(".item").forEach(el => {
-      el.classList.remove("active");
-    });
 
+<<<<<<< HEAD
     item.parentElement.classList.add("active");
   });
 });
@@ -22,3 +18,12 @@ function mostrarMatricula(event) {
 
 if (botaoNav) botaoNav.addEventListener('click', mostrarMatricula);
 if (botaoHero) botaoHero.addEventListener('click', mostrarMatricula);
+=======
+item.forEach( itens => {
+  itens.addEventListener("click", () =>{
+    const elemento= itens.parentElement
+
+    elemento.classList.toggle("active")
+  })
+})
+>>>>>>> ec1f25c01d7626aaccdecc4dc73c55b361942bee
