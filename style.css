@@ -390,7 +390,7 @@ header {
   font-weight: 600;
 }
 
-.gh-repos__filter-bar {
+.github_filter-bar {
   display: flex;
   gap: 8px;
   margin-bottom: 1.5rem;
@@ -416,9 +416,9 @@ header {
   color: var(--mauve);
 }
 
-.gh-repos__grid {
+.github_grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 14px;
 }
 
