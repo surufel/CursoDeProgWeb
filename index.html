@@ -15,13 +15,13 @@
       <div class="nav">
         <span class="logo">Syntax</span>
         <div class="conteudo-nav">
-          <a>Professor</a>
+          <a data-target="professor">Professor</a>
           <a>Curriculo</a>
-          <a>GITHUB</a>
-          <a>Curso</a>
-          <a>Preço</a>
+          <a data-target="repositorios">GITHUB</a>
+          <a data-target="ementa">Curso</a>
+          <a data-target="precos">Preço</a>
         </div>
-        <span class="matricula">Matricule-se</span>
+        <span class="matricula" data-target="precos">Matricule-se</span>
       </div>
     </header>
 
@@ -38,7 +38,7 @@
     
 
     <main>
-      <section class="card_professor">
+      <section class="card_professor" id="professor">
         <img
           src="foto.jpg"
           alt="Foto do Professor Lucas Silva"
@@ -76,8 +76,8 @@
         <div class="github_header_texto">
           <span class="github_eyebrow">//open source</span>
           <h2 class="github_titulo">Repositórios</h2>
-          <p class="github_subtitulo">Projetos que uso para ensinar e demonstrar conceitos na 
-            prática.
+          <p class="github_subtitulo">Meu portifólio de projetos e algumas contribuições para a 
+            comunidade.
           </p>
         </div>
         <a class="github_link-all" href="https://github.com/surufel" target="_blank" rel="noopener">

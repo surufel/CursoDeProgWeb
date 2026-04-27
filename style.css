@@ -49,6 +49,10 @@ header {
   z-index: 50;
 }
 
+section {
+  padding-top: 40px;
+}
+
 .nav {
   background-color: transparent;
   backdrop-filter: blur(24px);
@@ -87,6 +91,12 @@ header {
   letter-spacing: 0.1em;
   font-size: 0.875rem;
   text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.conteudo-nav a:hover {
+  color: var(--mauve);
 }
 
 .matricula {

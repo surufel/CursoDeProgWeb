@@ -138,3 +138,18 @@ document.getElementById('github_filter-bar').addEventListener('click', function(
 })
 
 buscarRepositorios()
+
+//adicionando botoes para scoll
+document.querySelectorAll('[data-target]').forEach(link => {
+  link.addEventListener('click', () => {
+    const id = link.getAttribute('data-target')
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' })
+  })
+})
+
+//evita a navbar fixa de sobrepor conteúdo da seção
+const alturaNav = document.querySelector('header').offsetHeight;
+
+document.querySelectorAll('section').forEach(section => {
+  section.style.scrollMarginTop = (alturaNav + 40) + 'px';
+});
