@@ -173,8 +173,8 @@ section {
 .card_professor {
   display: flex;
   align-items: center;
-  background-color: #121214;
-  border: 1px solid #29292e;
+  background-color: var(--mantle);
+  border: 1px solid var(--surface0);
   border-radius: 12px;
   padding: 32px;
   gap: 40px;
@@ -183,7 +183,7 @@ section {
 }
 
 .imagem_professor {
-  width: 250px;
+  width: 350px;
   height: auto;
   border-radius: 8px;
   object-fit: cover;
@@ -193,6 +193,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: left;
 }
 
 .professor_label {
@@ -213,14 +214,16 @@ section {
 
 .bio_professor {
   font-size: 16px;
-  color: #a8a8b3;
+  color: var(--subtext0);
   line-height: 1.6;
-  margin: 0 0 24px 0;
+  margin-bottom: 24px;
+  text-align: justify;
+  max-width: 600px;
 }
 
 .certificado_professor {
   display: flex;
-  gap: 24px;
+  gap: 32px;
   align-items: center;
 }
 
@@ -778,13 +781,16 @@ section {
 
 .grade{
  padding-left: 130px;
-
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ min-width: 100vh;
 
 }
 
 #ementa{
   max-width: 1200px;
-  margin: 0  auto;
+  margin: 0  20px;
   padding: 0 20px;
  
 }
