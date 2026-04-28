@@ -226,7 +226,6 @@ section {
   gap: 32px;
   align-items: center;
 }
-
 .certificado {
   display: flex;
   align-items: center;
@@ -781,16 +780,13 @@ section {
 
 .grade{
  padding-left: 130px;
- display: flex;
- justify-content: center;
- align-items: center;
- min-width: 100vh;
+
 
 }
 
 #ementa{
   max-width: 1200px;
-  margin: 0  20px;
+  margin: 0  auto;
   padding: 0 20px;
  
 }
