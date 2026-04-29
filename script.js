@@ -153,3 +153,54 @@ const alturaNav = document.querySelector('header').offsetHeight;
 document.querySelectorAll('section').forEach(section => {
   section.style.scrollMarginTop = (alturaNav + 40) + 'px';
 });
+
+const formularioMatricula = document.getElementById('form-contato');
+
+formularioMatricula.addEventListener('submit', async function(evento) {
+  evento.preventDefault(); 
+
+  const dados = new FormData(formularioMatricula);
+  
+  const parametrosEmail = {
+    nome: dados.get('nome'),
+    email: dados.get('email'),
+    pagamento: dados.get('pagamento')
+  };
+
+  const configEmailJS = {
+    service_id: 'service_l6hcwfm', 
+    template_id: 'template_80dgany', 
+    user_id: 'GNzR2UsohyM8Jugvd',
+    template_params: parametrosEmail
+  };
+
+  const botao = formularioMatricula.querySelector('.botao-enviar-cyan');
+  const textoOriginal = botao.textContent;
+  
+  try {
+    botao.textContent = 'Processando...';
+    botao.disabled = true;
+
+    const resposta = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(configEmailJS)
+    });
+
+    if (resposta.ok) {
+      alert('Matrícula solicitada com sucesso! Verifique a sua caixa de entrada.');
+      formularioMatricula.reset();
+    } else {
+      alert('Ocorreu um erro técnico ao processar. Tente novamente.');
+    }
+    
+  } catch (erro) {
+    console.error('Falha na comunicação:', erro);
+    alert('Erro de conexão. Verifique sua internet.');
+  } finally {
+    botao.textContent = textoOriginal;
+    botao.disabled = false;
+  }
+});
