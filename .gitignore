@@ -1,0 +1,4 @@
+# Ignora o arquivo de variáveis de ambiente
+.env
+.vercel/
+node_modules/
