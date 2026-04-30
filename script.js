@@ -195,3 +195,30 @@ formularioMatricula.addEventListener('submit', async function(evento) {
     botao.disabled = false;
   }
 });
+
+/*
+<------------------------------------------------------------------->
+        Conexão ao Servidor para realização de pagamentos
+*/
+
+document.getElementById("form-contato").addEventListener("submit", async (e) => {
+  e.preventDefault(); 
+
+  const nome = document.getElementById("nome").value; // Pega nome
+  const email = document.getElementById("email").value; // Pega e-mail
+
+  const resposta = await fetch("http://localhost:3000/payment", { // POST
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ nome, email, valor: 97.90 }), // Para tirar a dúvida, o MercadoPago vê valor como float, o Strippe só aceita em centavos.
+  });
+
+  const dados = await resposta.json(); // Espera a resposta
+
+  document.getElementById("qr-code-img").src =
+    "data:image/png;base64," + dados.qr_code_base64;
+
+  document.getElementById("copia-cola").textContent = dados.qr_code;
+
+  document.getElementById("area-pix").style.display = "block";
+});
