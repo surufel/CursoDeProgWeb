@@ -81,45 +81,57 @@ function renderizarCards(lista) {
 
 //api do github
 async function buscarRepositorios() {
-  const url = 'https://api.github.com/users/Surufel/repos'
-  const resposta = await fetch(url)
-  const repositorios = await resposta.json()
+try {
+    const url = 'https://api.github.com/users/Surufel/repos'
+    const resposta = await fetch(url)
 
-  //qtd total de repo
-  const quantidade = repositorios.length
-  document.getElementById('github_repo-count').textContent = quantidade
-
-  //qtd total de estrelas
-  let totalEstrelas = 0
-  repositorios.forEach(repo => {
-    totalEstrelas += repo.stargazers_count
-  })
-  document.getElementById('github_stars-count').textContent = totalEstrelas
-
-  //qtd de linguagens
-  let linguagensUnicas = []
-  repositorios.forEach(function(projeto) {
-    let linguagemDoProjeto = projeto.language
-    if (linguagemDoProjeto != null && !linguagensUnicas.includes(linguagemDoProjeto)) {
-      linguagensUnicas.push(linguagemDoProjeto)
+    if (!resposta.ok) {
+      throw new Error(`Erro da API: ${resposta.status} ${resposta.statusText}`)
     }
-  })
-  document.getElementById('github_language-count').textContent = linguagensUnicas.length
 
-  // salva os repos no formato que o projeto usa
-  todosOsRepos = repositorios.map(function(projeto) {
-    return {
-      name:     projeto.name,
-      desc:     projeto.description || 'Sem descrição no momento.',
-      lang:     projeto.language    || 'Outro',
-      estrelas: projeto.stargazers_count,
-      forks:    projeto.forks_count,
-      topics:   projeto.topics      || [],
-      url:      projeto.html_url,
-    }
-  })
+    const repositorios = await resposta.json()
+  
+    //qtd total de repo
+    const quantidade = repositorios.length
+    document.getElementById('github_repo-count').textContent = quantidade
+  
+    //qtd total de estrelas
+    let totalEstrelas = 0
+    repositorios.forEach(repo => {
+      totalEstrelas += repo.stargazers_count
+    })
+    document.getElementById('github_stars-count').textContent = totalEstrelas
+  
+    //qtd de linguagens
+    let linguagensUnicas = []
+    repositorios.forEach(function(projeto) {
+      let linguagemDoProjeto = projeto.language
+      if (linguagemDoProjeto != null && !linguagensUnicas.includes(linguagemDoProjeto)) {
+        linguagensUnicas.push(linguagemDoProjeto)
+      }
+    })
+    document.getElementById('github_language-count').textContent = linguagensUnicas.length
+  
+    // salva os repos no formato que o projeto usa
+    todosOsRepos = repositorios.map(function(projeto) {
+      return {
+        name:     projeto.name,
+        desc:     projeto.description || 'Sem descrição no momento.',
+        lang:     projeto.language    || 'Outro',
+        estrelas: projeto.stargazers_count,
+        forks:    projeto.forks_count,
+        topics:   projeto.topics      || [],
+        url:      projeto.html_url,
+      }
+    })
+  
+    renderizarCards(todosOsRepos)
 
-  renderizarCards(todosOsRepos)
+} catch (erro) {
+  console.error('Falha ao buscar repositórios:', erro)
+  document.getElementById('github_grid').innerHTML = `
+  <p class="gh-repos__error">Não foi possível carregar os repositórios. Tente novamente mais tarde.</p>`
+}
 }
 
 // listener dos filtros
@@ -148,11 +160,11 @@ document.querySelectorAll('[data-target]').forEach(link => {
 })
 
 //evita a navbar fixa de sobrepor conteúdo da seção
-const alturaNav = document.querySelector('header').offsetHeight;
+const alturaNav = document.querySelector('header').offsetHeight
 
 document.querySelectorAll('section').forEach(section => {
-  section.style.scrollMarginTop = (alturaNav + 40) + 'px';
-});
+  section.style.scrollMarginTop = (alturaNav + 40) + 'px'
+})
 
 const formularioMatricula = document.getElementById('form-contato');
 
