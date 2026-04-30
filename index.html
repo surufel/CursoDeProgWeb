@@ -255,23 +255,26 @@
                 <div class="input-group">
                     <label for="pagamento">FORMA DE PAGAMENTO</label>
                     <select id="pagamento" name="pagamento">
-                        <option value="cartao">Cartão</option>
+                        <option value="cartao" disabled>Cartão (em breve)</option>
                         <option value="pix">Pix</option>
-                        <option value="boleto">Boleto</option>
+                        <option value="boleto" disabled>Boleto (em breve)</option>
                     </select>
                 </div>
 
                 <button type="submit" class="botao-enviar-cyan">Confirmar Inscrição</button>
             </form>
+            <div id="area-pix" style="display:none; margin-top: 20px;">
+                  <p>Escaneie o QR Code ou copie o código abaixo:</p>
+                  <img id="qr-code-img" alt="QR Code Pix" style="width: 200px;"/>
+                  <br>
+                  <textarea id="copia-cola" rows="4" style="width:100%; margin-top:10px;" readonly></textarea>
+            </div>
         </div>
     </section>
 
     <footer></footer>
 
     <script src="script.js"></script>
-
-    
-
   </body>
 </html>
 
