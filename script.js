@@ -160,20 +160,6 @@ formularioMatricula.addEventListener('submit', async function(evento) {
   evento.preventDefault(); 
 
   const dados = new FormData(formularioMatricula);
-  
-  const parametrosEmail = {
-    nome: dados.get('nome'),
-    email: dados.get('email'),
-    pagamento: dados.get('pagamento')
-  };
-
-  const configEmailJS = {
-    service_id: 'service_l6hcwfm', 
-    template_id: 'template_80dgany', 
-    user_id: 'GNzR2UsohyM8Jugvd',
-    template_params: parametrosEmail
-  };
-
   const botao = formularioMatricula.querySelector('.botao-enviar-cyan');
   const textoOriginal = botao.textContent;
   
@@ -181,19 +167,25 @@ formularioMatricula.addEventListener('submit', async function(evento) {
     botao.textContent = 'Processando...';
     botao.disabled = true;
 
-    const resposta = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+    // Repare que agora chamamos a SUA rota local, e enviamos apenas os dados
+    const resposta = await fetch('/api/matricula', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(configEmailJS)
+      body: JSON.stringify({
+        nome: dados.get('nome'),
+        email: dados.get('email'),
+        pagamento: dados.get('pagamento')
+      })
     });
 
     if (resposta.ok) {
       alert('Matrícula solicitada com sucesso! Verifique a sua caixa de entrada.');
       formularioMatricula.reset();
     } else {
-      alert('Ocorreu um erro técnico ao processar. Tente novamente.');
+  const erroDetalhado = await resposta.json()
+  alert('Erro: ' + JSON.stringify(erroDetalhado))
     }
     
   } catch (erro) {
