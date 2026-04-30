@@ -184,8 +184,7 @@ formularioMatricula.addEventListener('submit', async function(evento) {
       alert('Matrícula solicitada com sucesso! Verifique a sua caixa de entrada.');
       formularioMatricula.reset();
     } else {
-  const erroDetalhado = await resposta.json()
-  alert('Erro: ' + JSON.stringify(erroDetalhado))
+      alert('Ocorreu um erro técnico ao processar. Tente novamente.');
     }
     
   } catch (erro) {
