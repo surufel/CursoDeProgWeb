@@ -791,3 +791,128 @@ section {
  
 }
 
+.main-footer {
+  background-color: var(--crust); 
+  padding: 80px 20px 30px; 
+  border-top: 1px solid var(--surface0);
+}
+
+.footer-container {
+  max-width: 1050px; 
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 350px 1fr; 
+  gap: 60px;
+  margin-bottom: 60px;
+}
+
+.footer-titulo {
+  color: var(--sky); 
+  font-size: 1.8rem;
+  margin: 0 0 15px 0;
+  font-weight: 700;
+}
+
+.footer-texto {
+  color: var(--overlay1);
+  line-height: 1.6;
+  margin-bottom: 30px;
+  font-size: 0.95rem;
+}
+
+.footer-info-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--subtext0);
+  font-family: 'JetBrains Mono', monospace; 
+  font-size: 0.85rem;
+}
+
+.footer-form-wrapper {
+  padding-left: 60px;
+  border-left: 1px solid var(--surface0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-titulo {
+  color: var(--text);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 25px 0;
+}
+
+.footer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 20px;
+}
+
+.footer-input, 
+.footer-textarea {
+  width: 100%;
+  padding: 16px;
+  background-color: var(--mantle); 
+  border: 1px solid var(--surface0);
+  border-radius: 8px;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.footer-input::placeholder,
+.footer-textarea::placeholder {
+  color: var(--surface2);
+}
+
+.footer-input:focus, 
+.footer-textarea:focus {
+  border-color: var(--sky);
+  background-color: var(--base);
+}
+
+.footer-textarea {
+  resize: vertical;
+}
+
+.footer-btn {
+  padding: 14px 32px;
+  background-color: transparent;
+  color: var(--sky);
+  border: 1px solid var(--sky);
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-end; 
+  transition: all 0.2s ease;
+}
+
+.footer-btn:hover {
+  background-color: var(--sky);
+  color: var(--crust);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 25px;
+  color: var(--overlay0);
+  font-size: 0.85rem;
+}
