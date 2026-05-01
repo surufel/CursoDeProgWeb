@@ -15,13 +15,13 @@
       <div class="nav">
         <span class="logo">Syntax</span>
         <div class="conteudo-nav">
-          <a>Professor</a>
+          <a data-target="professor">Professor</a>
           <a>Curriculo</a>
-          <a>GITHUB</a>
-          <a>Curso</a>
-          <a>Preço</a>
+          <a data-target="repositorios">GITHUB</a>
+          <a data-target="ementa">Curso</a>
+          <a data-target="precos">Preço</a>
         </div>
-        <span class="matricula">Matricule-se</span>
+        <span class="matricula" data-target="precos">Matricule-se</span>
       </div>
     </header>
 
@@ -38,17 +38,17 @@
     
 
     <main>
-      <section class="card_professor">
+      <section class="card_professor" id="professor">
         <img
           src="foto.jpg"
-          alt="Foto do Professor Lucas Silva"
+          alt="Foto do Professor João Pereira"
           class="imagem_professor"
         />
         
 
         <div class="info_professor">
           <span class="professor_label">Professor</span>
-          <h2 class="nome_professor">Lucas Silva</h2>
+          <h2 class="nome_professor">João Pereira</h2>
           <p class="bio_professor">
             Especialista em Frontend com mais de 10 anos de experiência no
             mercado e tendo 3 anos de atuação como professor, tendo passado por
@@ -76,11 +76,11 @@
         <div class="github_header_texto">
           <span class="github_eyebrow">//open source</span>
           <h2 class="github_titulo">Repositórios</h2>
-          <p class="github_subtitulo">Projetos que uso para ensinar e demonstrar conceitos na 
-            prática.
+          <p class="github_subtitulo">Meu portifólio de projetos e algumas contribuições para a 
+            comunidade.
           </p>
         </div>
-        <a class="github_link-all" href="https://github.com/AyanCoders" target="_blank" rel="noopener">
+        <a class="github_link-all" href="https://github.com/surufel" target="_blank" rel="noopener">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
             </svg>
@@ -95,30 +95,36 @@
         <div class="github_stats-pill">
           <span class="github_stat-value" id="github_stars-count">342</span> estrelas totais          
         </div>
-        <div class="github_stat-pill">
-            <span class="github_stat-value">5</span> linguagens
+        <div class="github_stats-pill">
+            <span class="github_stat-value" id="github_language-count">5</span> linguagens
         </div>
       </div>
 
-      <div class="gh-repos__filter-bar" id="gh-filter-bar" role="group" aria-label="Filtrar por linguagem">
+      <div class="github_filter-bar" id="github_filter-bar" role="group" aria-label="Filtrar por linguagem">
         <button class="gh-repos__filter-btn gh-repos__filter-btn--active" data-lang="all">Todos</button>
         <button class="gh-repos__filter-btn" data-lang="JavaScript">JavaScript</button>
         <button class="gh-repos__filter-btn" data-lang="TypeScript">TypeScript</button>
         <button class="gh-repos__filter-btn" data-lang="HTML">HTML</button>
         <button class="gh-repos__filter-btn" data-lang="CSS">CSS</button>
         <button class="gh-repos__filter-btn" data-lang="Python">Python</button>
-        <button class="gh-repos__filter-btn" data-lang="Python">Rust</button>
+        <button class="gh-repos__filter-btn" data-lang="Rust">Rust</button>
+        <button class="gh-repos__filter-btn" data-lang="Shell">Shell</button>
+        <button class="gh-repos__filter-btn" data-lang="C">C</button>
+        <button class="gh-repos__filter-btn" data-lang="C#">C#</button>
+        <button class="gh-repos__filter-btn" data-lang="Java">Java</button>
       </div>
 
-      <div class="gh-repos__grid" id="gh-repos-grid" aria-live="polite">
+      <div class="github_grid" id="github_grid" aria-live="polite">
         <!-- Cards injetados via JS -->
       </div>
 
     </section>
 
     <section id="ementa">
+      <h1 class="grade">Ementa do curso:</h1>
+
       <div class="sumario">
-      
+
       <div class="item">
         <div class="corpo">
           <span class="numero">1</span>
@@ -249,7 +255,7 @@
         </div>
       </div>
 
-    </div>
+     </div>
     </section>
 
     <section class="secao-comercial" id="precos">
@@ -258,7 +264,7 @@
             <p class="professor_label">Acesso Vitalício</p>
             <h2 class="nome_professor">Pacote Full-Stack</h2>
             <div class="preco_valor">
-                R$ 97<span>,90</span>
+                R$ 97,90 
             </div>
             <p class="bio_professor">Consiga sua primeira vaga no mercado de tecnologia com suporte individual e projetos reais.</p>
             
@@ -271,36 +277,81 @@
 
         <div class="form_matricula">
             <h3>Finalize sua Matrícula</h3>
-            <form action="#">
+            <form id="form-contato" action="#">
                 <div class="input-group">
                     <label for="nome">NOME COMPLETO</label>
-                    <input type="text" id="nome" placeholder="Digite seu nome" required>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
                 </div>
                 
                 <div class="input-group">
                     <label for="email">E-MAIL PARA ACESSO</label>
-                    <input type="email" id="email" placeholder="aluno@faculdade.com.br" required>
+                    <input type="email" id="email" name="email" placeholder="aluno@faculdade.com.br" required>
                 </div>
 
                 <div class="input-group">
                     <label for="pagamento">FORMA DE PAGAMENTO</label>
-                    <select id="pagamento">
-                        <option value="cartao">Cartão</option>
+                    <select id="pagamento" name="pagamento">
+                        <option value="cartao" disabled>Cartão (em breve)</option>
                         <option value="pix">Pix</option>
-                        <option value="boleto">Boleto</option>
+                        <option value="boleto" disabled>Boleto (em breve)</option>
                     </select>
                 </div>
 
                 <button type="submit" class="botao-enviar-cyan">Confirmar Inscrição</button>
             </form>
+            <div id="area-pix" style="display:none; margin-top: 20px;">
+                  <p>Escaneie o QR Code ou copie o código abaixo:</p>
+                  <img id="qr-code-img" alt="QR Code Pix" style="width: 200px;"/>
+                  <br>
+                  <textarea id="copia-cola" rows="4" style="width:100%; margin-top:10px;" readonly></textarea>
+            </div>
         </div>
     </section>
-    <footer></footer>
+
+  <footer class="main-footer">
+      <div class="footer-container">
+        <div class="footer-contato">
+          <h3 class="footer-titulo">Syntax</h3>
+          <p class="footer-texto">A plataforma definitiva para desenvolvedores que buscam excelência técnica e foco em resultados.</p>
+          
+          <div class="footer-info-group">
+            <span class="info-item">
+              contato@syntax.dev
+            </span>
+            <span class="info-item">
+              +55 (86) 99999-9999
+            </span>
+          </div>
+
+          <div class="footer-social">
+            <a href="#" class="social-icon" aria-label="Website">
+              <i class="ph ph-globe"></i> 
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-form-wrapper">
+          <h3 class="form-titulo">Deixe uma mensagem</h3>
+          <form class="footer-form" action="#">
+            
+            <div class="form-row">
+              <input type="text" placeholder="Nome completo" class="footer-input" required>
+              <input type="email" placeholder="Seu melhor e-mail" class="footer-input" required>
+            </div>
+            
+            <textarea placeholder="Como podemos ajudar?" class="footer-textarea" rows="3" required></textarea>
+            
+            <button type="submit" class="footer-btn">Enviar contato</button>
+          </form>
+        </div>
+
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Syntax. Todos os direitos reservados.</p>
+      </div>
+    </footer>
 
     <script src="script.js"></script>
-
-    
-
   </body>
 </html>
 

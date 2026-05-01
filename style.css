@@ -49,6 +49,10 @@ header {
   z-index: 50;
 }
 
+section {
+  padding-top: 40px;
+}
+
 .nav {
   background-color: transparent;
   backdrop-filter: blur(24px);
@@ -87,6 +91,12 @@ header {
   letter-spacing: 0.1em;
   font-size: 0.875rem;
   text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.conteudo-nav a:hover {
+  color: var(--mauve);
 }
 
 .matricula {
@@ -163,8 +173,8 @@ header {
 .card_professor {
   display: flex;
   align-items: center;
-  background-color: #121214;
-  border: 1px solid #29292e;
+  background-color: var(--mantle);
+  border: 1px solid var(--surface0);
   border-radius: 12px;
   padding: 32px;
   gap: 40px;
@@ -173,7 +183,7 @@ header {
 }
 
 .imagem_professor {
-  width: 250px;
+  width: 350px;
   height: auto;
   border-radius: 8px;
   object-fit: cover;
@@ -183,6 +193,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: left;
 }
 
 .professor_label {
@@ -203,17 +214,18 @@ header {
 
 .bio_professor {
   font-size: 16px;
-  color: #a8a8b3;
+  color: var(--subtext0);
   line-height: 1.6;
-  margin: 0 0 24px 0;
+  margin-bottom: 24px;
+  text-align: justify;
+  max-width: 600px;
 }
 
 .certificado_professor {
   display: flex;
-  gap: 24px;
+  gap: 32px;
   align-items: center;
 }
-
 .certificado {
   display: flex;
   align-items: center;
@@ -390,7 +402,7 @@ header {
   font-weight: 600;
 }
 
-.gh-repos__filter-bar {
+.github_filter-bar {
   display: flex;
   gap: 8px;
   margin-bottom: 1.5rem;
@@ -416,9 +428,9 @@ header {
   color: var(--mauve);
 }
 
-.gh-repos__grid {
+.github_grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 14px;
 }
 
@@ -609,8 +621,8 @@ header {
   max-width: 1000px;
   margin: 80px auto;
   padding: 0 20px;
-  display: none; 
-  opacity: 0;   
+  display: grid; 
+  opacity: 1;   
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: center;
@@ -762,4 +774,145 @@ header {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+
+
+.grade{
+ padding-left: 130px;
+
+
+}
+
+#ementa{
+  max-width: 1200px;
+  margin: 0  auto;
+  padding: 0 20px;
+ 
+}
+
+.main-footer {
+  background-color: var(--crust); 
+  padding: 80px 20px 30px; 
+  border-top: 1px solid var(--surface0);
+}
+
+.footer-container {
+  max-width: 1050px; 
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 350px 1fr; 
+  gap: 60px;
+  margin-bottom: 60px;
+}
+
+.footer-titulo {
+  color: var(--sky); 
+  font-size: 1.8rem;
+  margin: 0 0 15px 0;
+  font-weight: 700;
+}
+
+.footer-texto {
+  color: var(--overlay1);
+  line-height: 1.6;
+  margin-bottom: 30px;
+  font-size: 0.95rem;
+}
+
+.footer-info-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--subtext0);
+  font-family: 'JetBrains Mono', monospace; 
+  font-size: 0.85rem;
+}
+
+.footer-form-wrapper {
+  padding-left: 60px;
+  border-left: 1px solid var(--surface0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-titulo {
+  color: var(--text);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 25px 0;
+}
+
+.footer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 20px;
+}
+
+.footer-input, 
+.footer-textarea {
+  width: 100%;
+  padding: 16px;
+  background-color: var(--mantle); 
+  border: 1px solid var(--surface0);
+  border-radius: 8px;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.footer-input::placeholder,
+.footer-textarea::placeholder {
+  color: var(--surface2);
+}
+
+.footer-input:focus, 
+.footer-textarea:focus {
+  border-color: var(--sky);
+  background-color: var(--base);
+}
+
+.footer-textarea {
+  resize: vertical;
+}
+
+.footer-btn {
+  padding: 14px 32px;
+  background-color: transparent;
+  color: var(--sky);
+  border: 1px solid var(--sky);
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-end; 
+  transition: all 0.2s ease;
+}
+
+.footer-btn:hover {
+  background-color: var(--sky);
+  color: var(--crust);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 25px;
+  color: var(--overlay0);
+  font-size: 0.85rem;
 }
