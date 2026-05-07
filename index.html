@@ -296,14 +296,14 @@
 
         <div class="footer-form-wrapper">
           <h3 class="form-titulo">Deixe uma mensagem</h3>
-          <form class="footer-form" action="#">
+          <form class="footer-form" action="https://formspree.io/f/mlgzndry" method="POST">
             
             <div class="form-row">
-              <input type="text" placeholder="Nome completo" class="footer-input" required>
-              <input type="email" placeholder="Seu melhor e-mail" class="footer-input" required>
+              <input type="text" name="nome" placeholder="Nome completo" class="footer-input" required>
+              <input type="email" name="email" placeholder="Seu melhor e-mail" class="footer-input" required>
             </div>
             
-            <textarea placeholder="Como podemos ajudar?" class="footer-textarea" rows="3" required></textarea>
+            <textarea name="mensagem" placeholder="Como podemos ajudar?" class="footer-textarea" rows="3" required></textarea>
             
             <button type="submit" class="footer-btn">Enviar contato</button>
           </form>
