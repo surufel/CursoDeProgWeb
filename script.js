@@ -166,47 +166,8 @@ document.querySelectorAll('section').forEach(section => {
   section.style.scrollMarginTop = (alturaNav + 40) + 'px'
 })
 
-const formularioMatricula = document.getElementById('form-contato');
 
-formularioMatricula.addEventListener('submit', async function(evento) {
-  evento.preventDefault(); 
 
-  const dados = new FormData(formularioMatricula);
-  const botao = formularioMatricula.querySelector('.botao-enviar-cyan');
-  const textoOriginal = botao.textContent;
-  
-  try {
-    botao.textContent = 'Processando...';
-    botao.disabled = true;
-
-    // Repare que agora chamamos a SUA rota local, e enviamos apenas os dados
-    const resposta = await fetch('/api/matricula', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        nome: dados.get('nome'),
-        email: dados.get('email'),
-        pagamento: dados.get('pagamento')
-      })
-    });
-
-    if (resposta.ok) {
-      alert('Matrícula solicitada com sucesso! Verifique a sua caixa de entrada.');
-      formularioMatricula.reset();
-    } else {
-      alert('Ocorreu um erro técnico ao processar. Tente novamente.');
-    }
-    
-  } catch (erro) {
-    console.error('Falha na comunicação:', erro);
-    alert('Erro de conexão. Verifique sua internet.');
-  } finally {
-    botao.textContent = textoOriginal;
-    botao.disabled = false;
-  }
-});
 
 /*
 <------------------------------------------------------------------->
@@ -219,7 +180,7 @@ document.getElementById("form-contato").addEventListener("submit", async (e) => 
   const nome = document.getElementById("nome").value; // Pega nome
   const email = document.getElementById("email").value; // Pega e-mail
 
-  const resposta = await fetch("http://localhost:3000/payment", { // POST
+  const resposta = await fetch("/api/payment", { // POST
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ nome, email, valor: 97.90 }), // Para tirar a dúvida, o MercadoPago vê valor como float, o Strippe só aceita em centavos.
