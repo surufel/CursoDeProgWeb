@@ -916,3 +916,18 @@ section {
   color: var(--overlay0);
   font-size: 0.85rem;
 }
+
+.botao-ementa {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 0.85rem 2rem;
+  background-color: transparent;
+  color: var(--sky);
+  border: 1px solid var(--sky);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  align-self: flex-start;
+}
