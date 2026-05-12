@@ -14,7 +14,7 @@ const paymentClient = new Payment(client);
 
 app.post('/api/payment', async (req, res) => {
     try {
-        const { nome, email, valor, token, parcelas } = req.body;
+        const { nome, email, valor, token, parcelas, paymentMethodId, issuerId } = req.body;
         console.log('Dados recebidos:', { token, paymentMethodId, issuerId });
         // Validação básica — todos os campos são obrigatórios
         if (!nome || !email || !valor || !token) {
