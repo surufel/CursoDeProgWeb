@@ -24,7 +24,7 @@ if (botaoHero) botaoHero.addEventListener('click', mostrarMatricula);
 // Inicializa o SDK do Mercado Pago com sua Public Key
 // Substitua pela sua chave pública real (começa com APP_USR- ou TEST-)
 // ---------------------------------------------------------------
-const mp = new MercadoPago('APP_USR-d5868c63-e266-4443-a22b-79ee73172ada', { locale: 'pt-BR' });
+const mp = new MercadoPago('TEST-86368cc6-0a21-431a-a8aa-d3d276d6d5c7', { locale: 'pt-BR' });
 
 // Mostrar/ocultar campos do cartão conforme seleção
 document.getElementById('pagamento').addEventListener('change', function () {
