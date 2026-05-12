@@ -45,6 +45,24 @@ document.getElementById('card-expiry').addEventListener('input', function () {
   this.value = v;
 });
 
+let paymentMethodId = '';
+let issuerId = '';
+
+document.getElementById('card-number').addEventListener('input', async function () {
+  const bin = this.value.replace(/\s/g, '').slice(0, 6);
+  if (bin.length === 6) {
+    try {
+      const metodos = await mp.getPaymentMethods({ bin });
+      if (metodos && metodos.results && metodos.results.length > 0) {
+        paymentMethodId = metodos.results[0].id;
+        issuerId        = metodos.results[0].issuer?.id || '';
+      }
+    } catch (err) {
+      console.warn('Não foi possível detectar a bandeira:', err);
+    }
+  }
+});
+
 // ---------------------------------------------------------------
 // Submit do formulário
 // ---------------------------------------------------------------
