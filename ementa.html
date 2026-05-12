@@ -8,100 +8,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
   <title>Ementa do Curso - Syntax</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    .ementa-hero {
-      min-height: 38vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 6rem 2rem 2rem;
-      background-image: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(137,180,250,0.18) 0%, rgba(203,166,247,0.12) 40%, transparent 70%);
-    }
-    .ementa-eyebrow {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 11px;
-      color: var(--mauve);
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      margin-bottom: 0.75rem;
-    }
-    .ementa-hero h1 {
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
-      font-weight: 800;
-      color: var(--text);
-      margin: 0 0 1rem;
-      line-height: 1.2;
-    }
-    .ementa-hero p {
-      color: var(--subtext0);
-      max-width: 520px;
-      line-height: 1.7;
-      margin: 0 0 1.75rem;
-    }
-    .voltar-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 11px;
-      color: var(--sky);
-      text-decoration: none;
-      border: 1px solid rgba(137,220,235,0.3);
-      padding: 6px 14px;
-      border-radius: 20px;
-      transition: background 0.2s, border-color 0.2s;
-    }
-    .voltar-btn:hover {
-      background: rgba(137,220,235,0.1);
-      border-color: rgba(137,220,235,0.6);
-    }
-    .ementa-page {
-      max-width: 900px;
-      margin: 0 auto 80px;
-      padding: 0 20px;
-    }
-    .modulos-label {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 11px;
-      color: var(--overlay1);
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin-bottom: 1.25rem;
-    }
-    .matricula-cta {
-      margin-top: 40px;
-      background: linear-gradient(135deg, var(--surface0) 0%, var(--mantle) 100%);
-      border: 1px solid rgba(203,166,247,0.25);
-      border-radius: 16px;
-      padding: 40px;
-      text-align: center;
-    }
-    .matricula-cta h3 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--text);
-      margin: 0 0 10px;
-    }
-    .matricula-cta p {
-      color: var(--subtext0);
-      margin: 0 0 24px;
-    }
-  </style>
+  <link rel="stylesheet" href="ementacss.css" />
 </head>
 <body>
 
   <header>
     <div class="nav">
-      <span class="logo">Syntax</span>
+      <a href="index.html" class="logo2">Syntax</a>
       <div class="conteudo-nav">
         <a href="index.html#professor">Professor</a>
         <a href="index.html#repositorios">GitHub</a>
         <a href="ementa.html">Curso</a>
         <a href="index.html#precos">Preço</a>
       </div>
-      <a href="index.html#precos" class="matricula">Matricule-se</a>
+      <a href="index.html#precos" class="matricula2">Matricule-se</a>
     </div>
   </header>
 
@@ -113,20 +33,20 @@
   </div>
 
   <section class="ementa-page">
-    <p class="modulos-label">// 7 módulos · JavaScript do zero</p>
+    <p class="modulos-label">// 8 módulos · JavaScript do zero</p>
 
     <div class="sumario">
 
       <div class="item">
         <div class="corpo">
           <span class="numero">1</span>
-          <span class="cabecalho">Introdução ao JavaScript</span>
+          <span class="cabecalho">Fundamentos do JavaScript</span>
           <span class="botao"> ⌄ </span>
         </div>
         <div class="conteudo">
           <ul>
             <li>O que é JavaScript e como funciona no navegador</li>
-            <li>Como incluir JS no HTML</li>
+            <li>Como incluir JavaScript no HTML</li>
             <li>Variáveis (var, let, const)</li>
             <li>Tipos de dados (String, number, boolean, null, undefined)</li>
             <li>Operadores básicos</li>
@@ -143,11 +63,11 @@
         </div>
         <div class="conteudo">
           <ul>
-            <li>Estruturas condicionais</li>
+            <li>Estruturas condicionais (if, else)</li>
             <li>Operador ternário</li>
             <li>Switch case</li>
-            <li>Estruturas de repetição</li>
-            <li>Controle de fluxo</li>
+            <li>Estruturas de repetição (for, while)</li>
+            <li>Controle de fluxo (break, continue)</li>
             <li>Exercícios práticos de lógica</li>
           </ul>
         </div>
@@ -164,9 +84,9 @@
             <li>Declarações de funções</li>
             <li>Parâmetros e retorno</li>
             <li>Arrow functions</li>
-            <li>Escopo (global, local e bloco)</li>
+            <li>Escopo (global, local e de bloco)</li>
             <li>Funções anônimas</li>
-            <li>Callbacks (introdução)</li>
+            <li>Introdução a callbacks</li>
           </ul>
         </div>
       </div>
@@ -174,13 +94,13 @@
       <div class="item">
         <div class="corpo">
           <span class="numero">4</span>
-          <span class="cabecalho">Arrays e Objetos</span>
+          <span class="cabecalho">Estruturas de Dados: Arrays e Objetos</span>
           <span class="botao"> ⌄ </span>
         </div>
         <div class="conteudo">
           <ul>
-            <li>Criando e manipulando Arrays</li>
-            <li>Métodos importantes (push, pop, map, filter, reduce)</li>
+            <li>Criando e manipulando arrays</li>
+            <li>Métodos essenciais (push, pop, map, filter, reduce)</li>
             <li>Objetos e propriedades</li>
             <li>Acesso e modificação de dados</li>
             <li>Arrays de objetos</li>
@@ -199,10 +119,10 @@
           <ul>
             <li>O que é o DOM</li>
             <li>Seleção de elementos (querySelector, getElementById)</li>
-            <li>Alterando texto e HTML</li>
+            <li>Alteração de conteúdo (texto e HTML)</li>
             <li>Manipulando classes e estilos</li>
             <li>Criando e removendo elementos</li>
-            <li>Atualizando conteúdo dinamicamente</li>
+            <li>Atualização dinâmica da interface</li>
           </ul>
         </div>
       </div>
@@ -210,7 +130,7 @@
       <div class="item">
         <div class="corpo">
           <span class="numero">6</span>
-          <span class="cabecalho">Eventos e Interatividade</span>
+          <span class="cabecalho">Eventos e Interatividade no Navegador</span>
           <span class="botao"> ⌄ </span>
         </div>
         <div class="conteudo">
@@ -218,9 +138,9 @@
             <li>Eventos de clique (click)</li>
             <li>Eventos de teclado (keydown, keyup)</li>
             <li>Eventos de formulário (submit)</li>
-            <li>addEventListener na prática</li>
-            <li>Prevenindo comportamento padrão (preventDefault)</li>
-            <li>Criando interações reais (menus, modais, acordeão)</li>
+            <li>Uso de addEventListener</li>
+            <li>Prevenção de comportamento padrão (preventDefault)</li>
+            <li>Construção de componentes interativos (menus, modais, acordeão)</li>
           </ul>
         </div>
       </div>
@@ -228,18 +148,34 @@
       <div class="item">
         <div class="corpo">
           <span class="numero">7</span>
-          <span class="cabecalho">Assíncrono, APIs e Projeto Final</span>
+          <span class="cabecalho">JavaScript Assíncrono e Integração com APIs</span>
           <span class="botao"> ⌄ </span>
         </div>
         <div class="conteudo">
           <ul>
-            <li>O que é JavaScript assíncrono</li>
-            <li>fetch e requisições HTTP</li>
+            <li>Conceito de assincronicidade</li>
+            <li>Requisições HTTP com fetch</li>
             <li>Promises (then, catch)</li>
             <li>async/await</li>
-            <li>Consumindo APIs reais</li>
+            <li>Consumo de APIs reais</li>
             <li>Tratamento de erros</li>
-            <li>Projeto final: aplicação completa integrando tudo</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="corpo">
+          <span class="numero">8</span>
+          <span class="cabecalho">Projeto Prático Final</span>
+          <span class="botao"> ⌄ </span>
+        </div>
+        <div class="conteudo">
+          <ul>
+            <li>Planejamento da aplicação</li>
+            <li>Integração de DOM + eventos + API</li>
+            <li>Boas práticas de organização de código</li>
+            <li>Implementação de funcionalidades reais</li>
+            <li>Deploy básico da aplicação</li>
           </ul>
         </div>
       </div>
@@ -249,38 +185,57 @@
     <div class="matricula-cta">
       <h3>Pronto para começar?</h3>
       <p>Acesso vitalício a todos os módulos por R$ 97,90</p>
-      <a href="index.html#precos" class="titulo_botao">Matricule-se Agora →</a>
+      <a href="index.html#precos" class="matricula3">Matricule-se Agora →</a>
     </div>
 
   </section>
 
   <footer class="main-footer">
-    <div class="footer-container">
-      <div class="footer-contato">
-        <h3 class="footer-titulo">Syntax</h3>
-        <p class="footer-texto">A plataforma definitiva para desenvolvedores que buscam excelência técnica e foco em resultados.</p>
-        <div class="footer-info-group">
-          <span class="info-item">contato@syntax.dev</span>
-          <span class="info-item">+55 (86) 99999-9999</span>
-        </div>
-      </div>
-      <div class="footer-form-wrapper">
-        <h3 class="form-titulo">Deixe uma mensagem</h3>
-        <form class="footer-form" action="https://formspree.io/f/mlgzndry" method="POST">
-          <div class="form-row">
-            <input type="text" name="nome" placeholder="Nome completo" class="footer-input" required>
-            <input type="email" name="email" placeholder="Seu melhor e-mail" class="footer-input" required>
+      <div class="footer-container">
+        <div class="footer-contato">
+          <h3 class="footer-titulo">Syntax</h3>
+          <p class="footer-texto">A plataforma definitiva para desenvolvedores que buscam excelência técnica e foco em resultados.</p>
+          
+          <div class="footer-info-group">
+            <span class="info-item">
+              contato@syntax.dev
+            </span>
+            <span class="info-item">
+              +55 (86) 99999-9999
+            </span>
           </div>
-          <textarea name="mensagem" placeholder="Como podemos ajudar?" class="footer-textarea" rows="3" required></textarea>
-          <button type="submit" class="footer-btn">Enviar contato</button>
-        </form>
+
+        </div>
+
+        <div class="footer-form-wrapper">
+          <h3 class="form-titulo">Deixe uma mensagem</h3>
+          <form class="footer-form" action="https://formspree.io/f/mlgzndry" method="POST">
+            
+            <div class="form-row">
+              <input type="text" name="nome" placeholder="Nome completo" class="footer-input" required>
+              <input type="email" name="email" placeholder="Seu melhor e-mail" class="footer-input" required>
+            </div>
+            
+            <textarea name="mensagem" placeholder="Como podemos ajudar?" class="footer-textarea" rows="3" required></textarea>
+            
+            <button type="submit" class="footer-btn">Enviar contato</button>
+          </form>
+        </div>
+
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Syntax. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <div id="popup-sucesso" class="popup-overlay hidden">
+      <div class="popup-content glass-panel">
+        <h3 style="color: var(--sky); margin-bottom: 10px;">Mensagem Enviada!</h3>
+        <p style="color: var(--text); margin-bottom: 20px;">Obrigado, em breve entraremos em contato.</p>
+        <button onclick="fecharPopup()" class="footer-btn" style="align-self: center;">Fechar</button>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Syntax. Todos os direitos reservados.</p>
-    </div>
-  </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

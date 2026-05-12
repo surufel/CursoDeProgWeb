@@ -204,7 +204,7 @@ function renderizarCards(lista) {
 
 async function buscarRepositorios() {
   try {
-    const url = 'https://api.github.com/users/Surufel/repos'
+    const url = 'https://cursodeprogwebbackend.onrender.com/api/github'
     const resposta = await fetch(url)
 
     if (!resposta.ok) throw new Error(`Erro da API: ${resposta.status}`)

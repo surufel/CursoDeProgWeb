@@ -110,6 +110,7 @@ section {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-size: 0.75rem;
+  text-decoration: none;
 }
 
 .matricula:active {
@@ -238,9 +239,9 @@ section {
 
 .sumario{
   max-width: 900px;
-  margin:80px auto;
+  margin: 40px auto;
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   gap: 12px;
 }
 
@@ -757,6 +758,24 @@ section {
   box-shadow: 0 2px 5px rgba(0, 247, 249, 0.15);
 }
 
+.botao-ementa {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--sky);
+  text-decoration: none;
+  border: 1px solid rgba(137,220,235,0.3);
+  padding: 6px 14px;
+  border-radius: 20px;
+  transition: background 0.2s, border-color 0.2s;
+}
+.botao-ementa:hover {
+  background: rgba(137,220,235,0.1);
+  border-color: rgba(137,220,235,0.6);
+}
+
 @media (max-width: 900px) {
     .secao-comercial {
         grid-template-columns: 1fr;
@@ -940,4 +959,8 @@ section {
 
 .hidden {
   display: none !important;
+}
+
+.grade {
+  text-align: center;
 }
