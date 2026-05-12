@@ -43,8 +43,8 @@ app.post('/api/payment', async (req, res) => {
         });
 
         if (resultado.status === 'approved') {
-            await enviarEmailAluno(email, nome);
-            await enviarEmailEmpresa(email, nome, valor);
+            enviarEmailAluno(email, nome).catch(e => console.error('Erro email aluno:', e));
+            enviarEmailEmpresa(email, nome, valor).catch(e => console.error('Erro email empresa:', e));
         }
 
     } catch (error) {
