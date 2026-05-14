@@ -115,7 +115,7 @@ document.getElementById("form-contato").addEventListener("submit", async (e) => 
       throw new Error("Não foi possível gerar o token do cartão. Verifique os dados.");
     }
 
-    const resposta = await fetch("/api/payment", {
+    const resposta = await fetch("https://cursodeprogwebbackend.onrender.com/api/matricula/payment", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
