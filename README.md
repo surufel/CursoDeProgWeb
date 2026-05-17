@@ -12,7 +12,7 @@
 **Landing page e plataforma de vendas para um curso completo de desenvolvimento web frontend.**  
 Do zero ao JavaScript — com integração de pagamentos, portfólio dinâmico e ementa interativa.
 
-[🌐 Acessar o Site](https://jfplandim.github.io/CursoDeProgWeb) · [📁 Repositório Backend](https://github.com/jfplandim/CursoDeProgWebBackend)
+[🌐 Acessar o Site](https://jfplandim.github.io/CursoDeProgWeb) · [📁 Repositório Backend](https://github.com/jfplandim/CursoDeProgWebBackendv)
 
 </div>
 
@@ -23,6 +23,8 @@ Do zero ao JavaScript — com integração de pagamentos, portfólio dinâmico e
 O **Syntax** é uma landing page completa desenvolvida para apresentar e comercializar um curso de programação web. O projeto é composto por um frontend estático hospedado no **GitHub Pages**, que se comunica com um backend externo para processamento de pagamentos, integração com o GitHub e envio de e-mails.
 
 > 📦 **Este repositório contém apenas o frontend.** O backend responsável pelo processamento de pagamentos, envio de e-mails e integração com a API do GitHub está em um repositório separado, hospedado no Render (`https://cursodeprogwebbackend.onrender.com`).
+
+> ⚠️ **Atenção:** O backend está hospedado no plano gratuito do Render, que **hiberna automaticamente após um período de inatividade**. A primeira requisição após a hibernação pode levar até 1 minuto para responder enquanto o servidor reinicia. Isso é esperado e não indica erro.
 
 ---
 
@@ -70,46 +72,6 @@ Browser (Cliente)
               ├── /api/matricula/payment  ← processa pagamento
               └── /api/contato     ← formulário de contato
 ```
-
----
-
-## ⚙️ Como Rodar Localmente
-
-### 1. Clonar o repositório
-
-```bash
-git clone https://github.com/jfplandim/CursoDeProgWeb.git
-cd CursoDeProgWeb
-```
-
-### 2. Instalar dependências da API
-
-```bash
-npm install
-```
-
-### 3. Configurar variáveis de ambiente
-
-Crie um arquivo `.env` na raiz do projeto:
-
-```env
-MP_ACCESS_TOKEN=seu_access_token_do_mercado_pago
-WEBHOOK_URL=sua_url_de_webhook
-EMAIL_REMETENTE=seu_email@gmail.com
-EMAIL_SENHA_APP=sua_senha_de_app_do_gmail
-EMAIL_EMPRESA=email_da_sua_empresa@gmail.com
-```
-
-### 4. Rodar o frontend
-
-O projeto usa a extensão **Live Server** do VS Code. A porta já está pré-configurada em `.vscode/settings.json`:
-
-```
-Porta padrão: 5502
-```
-
-1. Abra o `index.html` no VS Code
-2. Clique em **"Go Live"** na barra de status
 
 ---
 
