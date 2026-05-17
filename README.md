@@ -12,7 +12,7 @@
 **Landing page e plataforma de vendas para um curso completo de desenvolvimento web frontend.**  
 Do zero ao JavaScript — com integração de pagamentos, portfólio dinâmico e ementa interativa.
 
-[🌐 Acessar o Site](https://jfplandim.github.io/CursoDeProgWeb) · [📁 Repositório Backend](https://github.com/jfplandim/CursoDeProgWebBackendv)
+[🌐 Acessar o Site](https://jfplandim.github.io/CursoDeProgWeb) · [📁 Repositório Backend](https://github.com/jfplandim/CursoDeProgWeb)
 
 </div>
 
@@ -25,6 +25,12 @@ O **Syntax** é uma landing page completa desenvolvida para apresentar e comerci
 > 📦 **Este repositório contém apenas o frontend.** O backend responsável pelo processamento de pagamentos, envio de e-mails e integração com a API do GitHub está em um repositório separado, hospedado no Render (`https://cursodeprogwebbackend.onrender.com`).
 
 > ⚠️ **Atenção:** O backend está hospedado no plano gratuito do Render, que **hiberna automaticamente após um período de inatividade**. A primeira requisição após a hibernação pode levar até 1 minuto para responder enquanto o servidor reinicia. Isso é esperado e não indica erro.
+
+---
+
+## 🌐 Acesse o Site
+
+**[https://jfplandim.github.io/CursoDeProgWeb](https://jfplandim.github.io/CursoDeProgWeb)**
 
 ---
 
