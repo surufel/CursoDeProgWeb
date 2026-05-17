@@ -1,66 +1,96 @@
-# 🚀 Syntax - Curso de Programação Web
+<div align="center">
 
-Bem-vindo ao repositório do **Syntax**, uma landing page e plataforma de vendas para um curso completo de desenvolvimento Web (do zero ao frontend).
+<img src="https://img.shields.io/badge/Status-Em%20Produção-brightgreen?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Deploy-GitHub%20Pages-222222?style=for-the-badge&logo=githubpages" />
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+<img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
 
-Este projeto foi desenvolvido para apresentar a ementa do curso, exibir o portfólio de projetos do professor (via integração com o GitHub) e processar matrículas utilizando a API do Mercado Pago.
+# 🖥️ Syntax — Curso de Programação Web
 
-> ⚠️ **Aviso Importante:** Este repositório contém os arquivos do **Frontend** e funções Serverless (para deploy na Vercel). **O Backend principal da aplicação está localizado em um repositório separado.**
+**Landing page e plataforma de vendas para um curso completo de desenvolvimento web frontend.**  
+Do zero ao JavaScript — com integração de pagamentos, portfólio dinâmico e ementa interativa.
+
+[🌐 Acessar o Site](https://jfplandim.github.io/CursoDeProgWeb) · [📁 Repositório Backend](https://github.com/jfplandim/CursoDeProgWeb)
+
+</div>
+
+---
+
+## 📌 Sobre o Projeto
+
+O **Syntax** é uma landing page completa desenvolvida para apresentar e comercializar um curso de programação web. O projeto é composto por um frontend estático hospedado no **GitHub Pages**, que se comunica com um backend externo para processamento de pagamentos, integração com o GitHub e envio de e-mails.
+
+> 📦 **Este repositório contém apenas o frontend.** O backend responsável pelo processamento de pagamentos, envio de e-mails e integração com a API do GitHub está em um repositório separado, hospedado no Render (`https://cursodeprogwebbackend.onrender.com`).
 
 ---
 
 ## ✨ Funcionalidades
 
-- **Landing Page Responsiva:** Interface moderna utilizando a paleta de cores *Catppuccin Mocha*.
-- **Integração com GitHub:** Exibição dinâmica dos repositórios, estrelas e linguagens utilizadas pelo professor, consumindo dados do backend.
-- **Sistema de Matrículas (Mercado Pago):** Geração de token de cartão de crédito de forma segura via SDK do Mercado Pago no frontend.
-- **Formulário de Contato:** Envio de mensagens integradas ao backend e ao Formspree.
-- **Ementa Interativa:** Sistema de acordeão (accordion) para visualização detalhada dos módulos do curso.
+| Feature | Descrição |
+|---|---|
+| 🎨 **Landing Page Responsiva** | Interface moderna com a paleta *Catppuccin Mocha* |
+| 🐙 **Integração com GitHub** | Exibe repositórios, estrelas e linguagens do professor via API |
+| 💳 **Sistema de Matrículas** | Processamento seguro de cartão de crédito via SDK do Mercado Pago |
+| 📬 **Formulário de Contato** | Envio de mensagens integrado ao backend e ao Formspree |
+| 📚 **Ementa Interativa** | Accordion com os módulos do curso organizados por nível |
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## 🛠️ Stack Tecnológica
 
-**Frontend:**
-- HTML5 (Semântico)
-- CSS3 (Flexbox, CSS Grid, Variáveis CSS)
-- JavaScript (Vanilla JS, Fetch API, manipulação de DOM)
+### Frontend
+- **HTML5** semântico
+- **CSS3** — Flexbox, Grid, variáveis CSS
+- **JavaScript Vanilla** — Fetch API, manipulação de DOM
 
-**Serverless / Micro-API local (`/api`):**
-- [Node.js](https://nodejs.org/) & [Express](https://expressjs.com/)
-- [Mercado Pago SDK](https://github.com/mercadopago/sdk-nodejs) (Processamento de pagamentos)
-- [Nodemailer](https://nodemailer.com/) (Envio de e-mails transacionais)
-- Cors & Dotenv
+### Backend / Serverless (`/api`)
+- **Node.js** + **Express**
+- **Mercado Pago SDK** — processamento de pagamentos
+- **Nodemailer** — e-mails transacionais
+- **Cors** + **Dotenv**
 
-**Design & Deploy:**
-- Paleta de Cores: [Catppuccin](https://catppuccin.com/)
-- Deploy configurado para a [Vercel](https://vercel.com/) (conforme `vercel.json`)
-
----
-
-## ⚙️ Arquitetura e Comunicação com o Backend
-
-O Frontend se comunica com um backend externo (hospedado no Render: `https://cursodeprogwebbackend.onrender.com`) para realizar as seguintes tarefas:
-
-1. **Listagem do GitHub:** Rota `/api/github` para puxar os repositórios.
-2. **Processamento Financeiro:** Rota `/api/matricula/payment` que recebe o token do cartão gerado no front e efetiva a cobrança.
-3. **Contato:** Rota `/api/contato` para processar dúvidas dos alunos.
-
-> *Observação: A pasta `/api` neste repositório contém funções prontas para rodar como Serverless Functions na Vercel, caso o sistema de e-mails e webhook do Mercado Pago sejam migrados para a mesma infraestrutura do front.*
+### Design & Infra
+- 🎨 Paleta: [Catppuccin Mocha](https://catppuccin.com/)
+- 🚀 Deploy frontend: [GitHub Pages](https://pages.github.com/)
+- 🔧 Backend externo: [Render](https://render.com/) — repositório separado
 
 ---
 
-## 🚀 Como Executar o Projeto Localmente
+## 🏗️ Arquitetura
+
+```
+Browser (Cliente)
+    │
+    ├──► GitHub Pages (Frontend estático)
+    │
+    └──► Render (Backend principal — repositório separado)
+              ├── /api/github      ← repositórios do professor
+              ├── /api/matricula/payment  ← processa pagamento
+              └── /api/contato     ← formulário de contato
+```
+
+---
+
+## ⚙️ Como Rodar Localmente
 
 ### 1. Clonar o repositório
 
 ```bash
-git clone https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
-cd SEU_REPOSITORIO
+git clone https://github.com/jfplandim/CursoDeProgWeb.git
+cd CursoDeProgWeb
 ```
 
-### 2. Configurar Variáveis de Ambiente
+### 2. Instalar dependências da API
 
-Crie um arquivo `.env` na raiz do projeto (caso vá testar as rotas da pasta `/api` localmente) e adicione as seguintes chaves:
+```bash
+npm install
+```
+
+### 3. Configurar variáveis de ambiente
+
+Crie um arquivo `.env` na raiz do projeto:
 
 ```env
 MP_ACCESS_TOKEN=seu_access_token_do_mercado_pago
@@ -70,28 +100,53 @@ EMAIL_SENHA_APP=sua_senha_de_app_do_gmail
 EMAIL_EMPRESA=email_da_sua_empresa@gmail.com
 ```
 
-### 3. Instalar Dependências da API
+### 4. Rodar o frontend
 
-```bash
-npm install
+O projeto usa a extensão **Live Server** do VS Code. A porta já está pré-configurada em `.vscode/settings.json`:
+
+```
+Porta padrão: 5502
 ```
 
-### 4. Rodar o Frontend
-
-Como o frontend é estático (HTML/CSS/JS), você pode utilizar a extensão **Live Server** no VS Code. O projeto já possui uma configuração (`.vscode/settings.json`) que define a porta padrão do Live Server para `5502`.
-
-1. Abra o arquivo `index.html`.
-2. Clique em **"Go Live"** na barra inferior do VS Code.
-3. Acesse `http://127.0.0.1:5502` no seu navegador.
+1. Abra o `index.html` no VS Code
+2. Clique em **"Go Live"** na barra de status
 
 ---
 
-## 👥 Equipe de Desenvolvimento
+## 📁 Estrutura de Arquivos
 
-Este projeto foi desenvolvido por:
+```
+CursoDeProgWeb/
+├── api/                  # Funções auxiliares de API
+├── .vscode/              # Configurações do editor (Live Server)
+├── index.html            # Página principal (landing page)
+├── ementa.html           # Página de ementa do curso
+├── style.css             # Estilos da landing page
+├── ementacss.css         # Estilos da ementa
+├── script.js             # JS da landing page
+├── ementa.js             # JS da ementa interativa
+├── foto.jpg              # Foto do professor
+└── package.json          # Dependências Node.js
+```
 
-- Henrique França de Souza Medeiros
-- Gustavo Nunes da Silva Pereira
-- José Francisco Paes Landim Sobrinho
-- Ricardo Cronemberger Cruz Ruben Pereira
-- João Guilherme Aragão Malta
+---
+
+## 👥 Equipe
+
+Desenvolvido por estudantes como projeto de curso:
+
+| Nome |
+|------|
+| Henrique França de Souza Medeiros |
+| Gustavo Nunes da Silva Pereira |
+| José Francisco Paes Landim Sobrinho |
+| Ricardo Cronemberger Cruz Ruben Pereira |
+| João Guilherme Aragão Malta |
+
+---
+
+<div align="center">
+
+Feito com 💜 usando a paleta [Catppuccin Mocha](https://catppuccin.com/)
+
+</div>
